@@ -7,11 +7,11 @@ const getList = async (type, start = 1) => {
   const size = await getSize(type);
   console.log(size);
   let blogList = [];
-  for (let i = start; i < size; i = i + 1) {
+  for (let i = start; i <= size; i = i + 1) {
     blogList.push({
       id: i,
-      image: getImage(type, i + 1),
-      text: await getText(type, i + 1),
+      image: getImage(type, i),
+      text: await getText(type, i),
     });
   }
   console.log(blogList);

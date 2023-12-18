@@ -29,10 +29,12 @@ export const getImage = (type, id) => {
 // id: numbers of the poster
 // filepath: the text file path inside the repo (default: "")
 export const getText = async (type, id, filePath = "") => {
+  console.log("filepath:", filePath == "");
   if (filePath == "") {
-    const filePath = `${type}/${id}/${id}.txt`;
+    filePath = `${type}/${id}/${id}.txt`;
   }
   const Url = `https://raw.githubusercontent.com/${GIT_USERNAME}/${GIT_REPO}/${GIT_BRANCH_NAME}/${filePath}`;
+  console.log(Url);
   try {
     const response = await fetch(Url);
     const data = await response.text();
