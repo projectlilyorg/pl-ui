@@ -1,6 +1,6 @@
 import Content from "@/components/Content/Content";
-import Link from "next/link";
 
+// Home Page
 export default function Home() {
   return (
     <main>

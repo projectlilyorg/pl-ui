@@ -1,3 +1,4 @@
+// metadata for Blogs page
 export const metadata = {
   title: "Blogs",
 };

@@ -5,11 +5,13 @@ import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// metadata for the website
 export const metadata = {
   title: "Project Lily",
   description: "Never Settle Persue Virtue",
 };
 
+// Navigation bar from the website
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
